@@ -1,0 +1,10 @@
+{
+    "hosting": {
+        "public": "codekids/www",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    }
+}
