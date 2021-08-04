@@ -4,7 +4,7 @@
         link_url = 'http://google.com'
         :base_color = "colors.blue_python"
         logo_name = 'logo_python.png'
-        header="Python Level 0"
+        header="Python Level 1"
          />
 </template>
 <script>
