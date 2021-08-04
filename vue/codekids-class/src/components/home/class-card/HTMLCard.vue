@@ -1,7 +1,7 @@
 <template lang="">
     <BaseCard  
         link_mode = 'a'
-        link_url = 'http://google.com'
+        link_url = 'https://1drv.ms/u/s!AtDz8RROreSxoN0y5DnO--alNgEquw?e=EIClb9'
         :base_color = "colors.black_html"
         logo_name = 'htmlcss.png'
         header="HTML CSS"

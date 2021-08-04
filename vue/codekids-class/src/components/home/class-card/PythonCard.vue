@@ -1,7 +1,7 @@
 <template lang="">
     <BaseCard  
         link_mode = 'a'
-        link_url = 'http://google.com'
+        link_url = 'https://1drv.ms/u/s!AtDz8RROreSxoNxdQjLpdJbA1xZXfg?e=d2zo4A'
         :base_color = "colors.blue_python"
         logo_name = 'logo_python.png'
         header="Python Level 1"

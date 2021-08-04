@@ -1,6 +1,6 @@
 {
     "hosting": {
-        "public": "codekids/www",
+        "public": "vue/codekids-class/dist",
         "ignore": [
             "firebase.json",
             "**/.*",
