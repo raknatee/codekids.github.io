@@ -1,9 +1,12 @@
 $normal-green: rgb(0, 128, 0);
 $normal-yellow:rgb(255, 192, 0);
-$normal-white: rgb(228, 228, 228);
+$normal-white: rgb(243, 243, 243);
 $blue-python: rgb(55, 116, 166);
+$red-tt: #e3392a;
 $black-html:#3b3b3b;
 :export {
     blue_python: $blue-python;
     black_html: $black-html;
+    red_tt: $red-tt;
+    normal_white: $normal-white;
 }

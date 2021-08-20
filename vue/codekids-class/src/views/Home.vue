@@ -7,6 +7,7 @@
     <div class="main_body">
       <PythonCard/>
       <HTMLCard/>
+      <TTCard/>
     </div>
    <footer>
    <Footer/>
@@ -21,11 +22,12 @@ export default{
     'Header': ()=>import("../components/home/Header.vue"),
     'PythonCard': ()=>import("../components/home/class-card/PythonCard.vue"),
     'HTMLCard': ()=>import("../components/home/class-card/HTMLCard.vue"),
+    'TTCard': ()=>import("../components/home/class-card/TTCard.vue"),
     'Footer': ()=>import("../components/home/Footer.vue")
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .home{
   position: relative;
   min-height: 100vh;
@@ -33,12 +35,14 @@ export default{
 header{
   @include grid-center();
   margin-top:1rem;
-  margin-bottom: 5rem;
 }
 .main_body{
   display: grid;
   justify-content: center;
   grid-row-gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  
 }
 footer{
   position: absolute;

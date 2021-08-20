@@ -3,6 +3,7 @@
         link_mode = 'a'
         link_url = 'https://1drv.ms/u/s!AtDz8RROreSxoN0y5DnO--alNgEquw?e=EIClb9'
         :base_color = "colors.black_html"
+        text_color = '#ffffff'
         logo_name = 'htmlcss.png'
         header="HTML CSS"
          />
@@ -22,6 +23,3 @@ export default {
     },
 }
 </script>
-<style lang="">
-    
-</style>

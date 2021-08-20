@@ -1,20 +1,22 @@
 <template lang="">
     <div :style="css_color_vars">
-       <div class="a_mode card" v-if="is_a_link_mode">
-           <a :href="link_url" target="_blank" 
-           >
-               <h1 class="text_header">{{header}}</h1>
-               <img class="img" :src="load_image" >
-           </a>
-       </div>
-       <div class="vue_mode" v-if="is_vue_router_mode">
-           <h1>hasnt been Implemented yet</h1>
-       </div>
+
+      <a :href="link_url" target="_blank" class="a_mode card" v-if="is_a_link_mode">
+          <h1 class="text_header">{{header}}</h1>
+          <img class="img" :src="load_image" >
+      </a>
+
+       
+      <router-link :to="link_url" class="vue_mode card" v-if="is_vue_router_mode">
+            <h1 class="text_header">{{header}}</h1>
+            <img class="img" :src="load_image" >
+      </router-link>
+    
     </div>
 </template>
 <script>
 export default {
-  props: ["link_mode", "link_url", "base_color", "header", "logo_name"],
+  props: ["link_mode", "link_url", "base_color","text_color", "header", "logo_name"],
   computed: {
     is_a_link_mode() {
       return this.link_mode === "a";
@@ -28,6 +30,7 @@ export default {
     css_color_vars(){
         return {
             '--bg-color': this.base_color,
+            '--text-color': this.text_color
         }
     }
   },
@@ -45,7 +48,9 @@ export default {
   transition: all;
   background-color: var(--bg-color);
   position: relative;
-    &:before {
+  display: block;
+  text-align: center;
+  &:before {
         position:absolute;
         width:100%;
         height:100%;
@@ -59,6 +64,7 @@ export default {
 
   &:hover {
     transform: translateY(-0.5rem) scale(1.05);
+    cursor: pointer;
 
     &:before{
         background-color: rgba(0,0,0,.25);
@@ -66,6 +72,7 @@ export default {
     & .img{
         animation: rotate 1s;
         z-index: 1;
+     
     }
     & .text_header{
         z-index:1;
@@ -76,13 +83,16 @@ export default {
     transform: translateY(0.5rem) scale(1.05);
     box-shadow: 5px 5px 20px -2px rgba(0, 0, 0, 0.46);
   }
-  a {
+  & a {
     display: grid;
     justify-items: center;
+    width: 100%;
+    height: 100%;
+
   }
 }
 .text_header {
-  color: rgb(255, 255, 255);
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 @keyframes rotate {
